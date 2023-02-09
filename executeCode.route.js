@@ -10,7 +10,7 @@ const router = express.Router();
 router.post("/run", (req, res) => {
   if (req.body.language == "python") req.body.language = "python3";
   else if (req.body.language == "c_cpp") req.body.language = "cpp17";
-  else if (req.body.language == "java") req.body.language = java;
+  else if (req.body.language == "java") req.body.language = "java";
 
   var programData = {
     clientId: clientId,

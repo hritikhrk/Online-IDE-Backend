@@ -2,11 +2,14 @@ const express = require("express");
 const dotenv = require("dotenv");
 const config = require("./config");
 const executeCode = require("./executeCode.route");
+const cors = require("cors");
 
 dotenv.config();
 
 const app = express();
-app.use(express.json())
+app.use(express.json());
+
+app.use(cors());
 
 app.get("/", (req, res) => {
   const serverRun = {

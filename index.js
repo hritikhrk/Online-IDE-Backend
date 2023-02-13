@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
   res.json(serverRun);
 });
 
-app.use("/api/", executeCode);
+app.use("/api", executeCode);
 
 app.listen(config.PORT, () => {
   console.log(`Backend server is running at http://localhost:${config.PORT}`);
